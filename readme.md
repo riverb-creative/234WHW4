@@ -1,8 +1,8 @@
 # CS 234W - Book App with React
 ## Author: River
-### Date: 02/11/2026
+### Date: 02/18/2026
 
-**Description:** CS 234W HW4 | Working with Events, State, and Controlled Components
+**Description:** CS 234W HW5 | Working with Events, State, and Controlled Components
 
 > [!NOTE]
 > How { useState } is implemented in this application:
