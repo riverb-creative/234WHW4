@@ -6,11 +6,16 @@
 
 import Book from './Book';
 
-const BookList = (books) => {
+const BookList = ({books, deleteBook, updateBook}) => {
+    //console.log("This is:", deleteBook);
     return (
         <div className="bookList">
-            {books.books.map((book, index) => (
-                <Book key={index} books={book}/>
+            {books.map((book, index) => (
+                <Book key={index} 
+                      books={book}
+                      deleteBook={deleteBook}
+                      updateBook={updateBook}
+                />
             ))}
         </div>
     )
