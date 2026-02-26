@@ -13,7 +13,7 @@ const Book = ({books, deleteBook, updateBook}) => {
     const [updateBookGenre, setUpdateBookGenre] = useState(books.genre);
     const [updateBookDate, setUpdateBookDate] = useState(books.releaseDate);
     const [updateBookAvgStar, setUpdateBookAvgStar] = useState(books.aveStars);
-    const [updateEbookOption, setUpdateEbookOption] = useState("noEbook");
+    const [updateEbookOption, setUpdateEbookOption] = useState(false);
 
     const handleRadioChange = (event) => {
         setUpdateEbookOption(event.target.value === 'true');
@@ -26,7 +26,7 @@ const Book = ({books, deleteBook, updateBook}) => {
         books.releaseDate = updateBookDate;
         books.aveStars = updateBookAvgStar;
         books.eBook = updateEbookOption;
-        updateBook(books);
+        updateBook(books._id, books);
         setEditBook(false);
     }
 
@@ -116,7 +116,7 @@ const Book = ({books, deleteBook, updateBook}) => {
         <button onClick={() => setEditBook(true)}>Edit {books.title}</button>
         <br />
         <br />
-        <button onClick={() => deleteBook(books.id)}>
+        <button onClick={() => deleteBook(books._id)}>
             Delete {books.title}
         </button>
         </>
