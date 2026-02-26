@@ -12,7 +12,7 @@ const AddBookForm = ({addBook}) => {
     const [theBookDate, setTheBookDate] = useState("");
     const [theBookAvgStar, setTheBookAvgStar] = useState("");
     const [theBookGenre, setTheBookGenre] = useState("");
-    const [theBookEbookOption, setTheBookEbookOption] = useState("false");
+    const [theBookEbookOption, setTheBookEbookOption] = useState(false);
 
     const handleRadioChange = (event) => {
         setTheBookEbookOption(event.target.value === 'true');
@@ -30,7 +30,7 @@ const AddBookForm = ({addBook}) => {
             genre: theBookGenre.split(", "),
             eBook: theBookEbookOption
         }
-
+   
         addBook(newBook);
 
         setTheBookTitle("");
