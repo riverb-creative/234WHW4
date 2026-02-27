@@ -9,7 +9,6 @@ import AddBookForm from './AddBookForm'
 function App() {
 
   const [BOOKS, setBOOKS] = useState([]);
-  const [message, setMessage] = useState([]); 
   //retrieve book data from api just one time
   //prior to our BookList component rendering
   useEffect(() => {
